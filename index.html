@@ -1,1 +1,58 @@
 
+import React from 'react';
+import { Heart } from 'lucide-react';
+
+const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="bg-gray-900 text-white py-12">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="mb-6 md:mb-0">
+            <a href="#" className="text-2xl font-bold text-blue-400">
+              Poola Prasad
+            </a>
+            <p className="mt-2 text-gray-400 max-w-md">
+              A professional website showcasing my work, skills, and thoughts. Feel free to explore and get in touch.
+            </p>
+          </div>
+          
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12">
+            <div>
+              <h4 className="text-lg font-bold mb-3">Quick Links</h4>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Home</a></li>
+                <li><a href="#about" className="text-gray-400 hover:text-blue-400 transition-colors">About</a></li>
+                <li><a href="#projects" className="text-gray-400 hover:text-blue-400 transition-colors">Projects</a></li>
+                <li><a href="#blog" className="text-gray-400 hover:text-blue-400 transition-colors">Blog</a></li>
+                <li><a href="#contact" className="text-gray-400 hover:text-blue-400 transition-colors">Contact</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-bold mb-3">Connect</h4>
+              <ul className="space-y-2">
+                <li><a href="https://github.com/yourusername" className="text-gray-400 hover:text-blue-400 transition-colors">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/yourusername" className="text-gray-400 hover:text-blue-400 transition-colors">LinkedIn</a></li>
+                <li><a href="https://twitter.com/yourusername" className="text-gray-400 hover:text-blue-400 transition-colors">Twitter</a></li>
+                <li><a href="mailto:your.email@example.com" className="text-gray-400 hover:text-blue-400 transition-colors">Email</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-400">
+            &copy; {currentYear} Poola Prasad. All rights reserved.
+          </p>
+          <p className="text-gray-400 flex items-center mt-4 md:mt-0">
+            Made with <Heart size={16} className="mx-1 text-red-500" /> by Poola Prasad
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
