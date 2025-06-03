@@ -3,42 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poola Prasad - Project & Delivery Management Leader | Agile Coach</title>
-    <meta name="description" content="Certified Project Manager and Agile Coach with 11+ years experience. PMP, CSM, CSPO certified. Helping teams deliver better and grow faster.">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <title>Poola Prasad - Agile Coach & Career Mentor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #3730a3;
+            --accent: #f59e0b;
+            --coral: #ff6b6b;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #fefefe;
+            --bg-light: #f8fafc;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --primary-color: #2D2A6D;
-            --accent-teal: #00D2FF;
-            --accent-orange: #FF6A3D;
-            --gradient-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --glass-bg: rgba(255, 255, 255, 0.1);
-            --glass-border: rgba(255, 255, 255, 0.2);
-            --text-dark: #2c3e50;
-            --text-light: #7f8c8d;
-            --white: #ffffff;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.15);
-        }
-
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: var(--text-dark);
+            color: var(--text);
+            background: var(--bg);
             overflow-x: hidden;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 2rem;
         }
 
         /* Navigation */
@@ -46,15 +44,13 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(45, 42, 109, 0.95);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
-            padding: 1rem 0;
             transition: all 0.3s ease;
         }
 
         nav.scrolled {
-            background: rgba(45, 42, 109, 0.98);
             box-shadow: var(--shadow);
         }
 
@@ -62,17 +58,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
         }
 
         .logo {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--white);
-            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary);
         }
 
         .nav-links {
@@ -82,15 +77,15 @@
         }
 
         .nav-links a {
-            color: var(--white);
             text-decoration: none;
+            color: var(--text);
             font-weight: 500;
             transition: color 0.3s ease;
             position: relative;
         }
 
         .nav-links a:hover {
-            color: var(--accent-teal);
+            color: var(--primary);
         }
 
         .nav-links a::after {
@@ -100,7 +95,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--accent-teal);
+            background: var(--accent);
             transition: width 0.3s ease;
         }
 
@@ -111,28 +106,22 @@
         /* Hero Section */
         .hero {
             min-height: 100vh;
-            background: var(--gradient-bg);
             display: flex;
             align-items: center;
             position: relative;
+            background: linear-gradient(135deg, rgba(103, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
             overflow: hidden;
         }
 
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23fff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23fff" stop-opacity="0"/></radialGradient></defs><circle cx="20%" cy="20%" r="200" fill="url(%23a)"/><circle cx="80%" cy="80%" r="300" fill="url(%23a)"/><circle cx="40%" cy="90%" r="100" fill="url(%23a)"/></svg>');
-            animation: float 20s infinite linear;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
         }
 
         .hero-content {
@@ -140,228 +129,187 @@
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
-            position: relative;
             z-index: 2;
         }
 
-        .hero-text {
-            color: var(--white);
-        }
-
         .hero-text h1 {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
-            font-weight: 800;
+            font-weight: 700;
             line-height: 1.2;
-            margin-bottom: 1rem;
-            animation: slideInUp 1s ease-out;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--coral) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 1s ease-out;
         }
 
-        .hero-text .subtitle {
-            font-size: 1.3rem;
+        .hero-text p {
+            font-size: 1.25rem;
+            color: var(--text-light);
             margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: slideInUp 1s ease-out 0.2s both;
+            animation: fadeInUp 1s ease-out 0.2s both;
         }
 
-        .hero-text .description {
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-            opacity: 0.8;
-            animation: slideInUp 1s ease-out 0.4s both;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            animation: slideInUp 1s ease-out 0.6s both;
-        }
-
-        .btn {
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--coral) 100%);
+            color: white;
             padding: 1rem 2rem;
             border: none;
             border-radius: 50px;
             font-weight: 600;
             text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 25px rgba(55, 48, 163, 0.3);
             transition: all 0.3s ease;
-            cursor: pointer;
-            font-size: 1rem;
+            animation: fadeInUp 1s ease-out 0.4s both;
         }
 
-        .btn-primary {
-            background: var(--accent-teal);
-            color: var(--white);
-            box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 210, 255, 0.4);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--white);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(55, 48, 163, 0.4);
         }
 
         .hero-image {
-            display: flex;
-            justify-content: center;
-            animation: slideInRight 1s ease-out 0.8s both;
+            position: relative;
+            animation: fadeInRight 1s ease-out 0.6s both;
         }
 
-        .profile-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 30px;
-            padding: 2rem;
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Service Pillars */
+        .pillars {
+            padding: 6rem 0;
+            background: var(--bg-light);
+        }
+
+        .pillars h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .pillar-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
             text-align: center;
             box-shadow: var(--shadow);
-        }
-
-        .profile-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, var(--accent-teal), var(--accent-orange));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            box-shadow: 0 10px 30px rgba(0, 210, 255, 0.3);
-        }
-
-        .profile-image i {
-            font-size: 4rem;
-            color: var(--white);
-        }
-
-        /* Values Ticker */
-        .values-ticker {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            margin: 4rem 0;
+            transition: all 0.3s ease;
+            position: relative;
             overflow: hidden;
         }
 
-        .ticker-content {
-            display: flex;
-            animation: scroll 20s linear infinite;
-            white-space: nowrap;
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--coral));
+            transition: left 0.3s ease;
         }
 
-        .ticker-item {
-            color: var(--white);
-            font-weight: 600;
-            font-size: 1.2rem;
-            margin-right: 4rem;
+        .pillar-card:hover::before {
+            left: 0;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pillar-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--coral));
+            border-radius: 20px;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
         }
 
-        @keyframes scroll {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-
-        /* Section Styles */
-        .section {
-            padding: 6rem 0;
-        }
-
-        .section-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 3rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--primary-color);
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 4rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+        .pillar-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
         }
 
         /* About Section */
-        .about-grid {
+        .about {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .about-content {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
         }
 
-        .about-image {
-            position: relative;
-        }
-
-        .about-card {
-            background: var(--white);
-            border-radius: 30px;
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            transform: rotate(-5deg);
-            transition: transform 0.3s ease;
-        }
-
-        .about-card:hover {
-            transform: rotate(0deg);
-        }
-
-        .about-text h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
+        .about-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
         }
 
         .about-text p {
-            margin-bottom: 1.5rem;
             font-size: 1.1rem;
-            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+        .values {
+            display: flex;
             gap: 1rem;
             margin-top: 2rem;
         }
 
-        .stat-item {
-            text-align: center;
-            padding: 1rem;
-            background: linear-gradient(135deg, var(--accent-teal), var(--accent-orange));
-            color: var(--white);
-            border-radius: 15px;
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            font-family: 'Poppins', sans-serif;
+        .value-tag {
+            background: linear-gradient(135deg, var(--accent), var(--coral));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
         }
 
         /* Services Section */
+        .services {
+            padding: 6rem 0;
+            background: var(--bg-light);
+        }
+
+        .services h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -369,214 +317,231 @@
         }
 
         .service-card {
-            background: var(--white);
-            border-radius: 25px;
-            padding: 2.5rem;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
             box-shadow: var(--shadow);
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent-teal), var(--accent-orange));
-            transition: left 0.3s ease;
-        }
-
-        .service-card:hover::before {
-            left: 0;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
         }
 
-        .service-icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent-teal), var(--accent-orange));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
+        .service-header {
+            background: linear-gradient(135deg, var(--primary), var(--coral));
+            color: white;
+            padding: 2rem;
+            text-align: center;
         }
 
-        .service-icon i {
-            font-size: 1.8rem;
-            color: var(--white);
-        }
-
-        .service-card h3 {
-            font-family: 'Poppins', sans-serif;
+        .service-header h3 {
             font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
+            margin-bottom: 0.5rem;
         }
 
-        .service-card p {
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-content ul {
+            list-style: none;
             margin-bottom: 2rem;
-            line-height: 1.6;
         }
 
-        /* Skills Section */
-        .skills-section {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        .service-content li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
         }
 
-        .skills-grid {
+        .service-content li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .service-cta {
+            background: var(--accent);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .service-cta:hover {
+            background: var(--coral);
+            transform: translateY(-2px);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 0;
+        }
+
+        .testimonials h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .skill-category {
-            background: var(--white);
-            border-radius: 20px;
+        .testimonial-card {
+            background: white;
             padding: 2rem;
-            box-shadow: var(--shadow);
-        }
-
-        .skill-category h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .skill-tag {
-            background: linear-gradient(135deg, var(--accent-teal), var(--accent-orange));
-            color: var(--white);
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        /* Certifications Section */
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .cert-badge {
-            background: var(--white);
             border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
             box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
             position: relative;
         }
 
-        .cert-badge:hover {
-            transform: scale(1.05);
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--accent);
+            font-family: 'Playfair Display', serif;
         }
 
-        .cert-badge.in-progress {
-            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
-            border: 2px dashed var(--accent-orange);
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
         }
 
-        .cert-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .cert-badge.completed .cert-icon {
-            color: var(--accent-teal);
-        }
-
-        .cert-badge.in-progress .cert-icon {
-            color: var(--accent-orange);
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background: var(--gradient-bg);
-            color: var(--white);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-
-        .contact-info h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .contact-item {
+        .testimonial-author {
             display: flex;
             align-items: center;
             gap: 1rem;
-            margin-bottom: 1.5rem;
         }
 
-        .contact-item i {
-            font-size: 1.5rem;
-            color: var(--accent-teal);
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--coral));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
         }
 
-        .contact-form {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 2rem;
+        .author-info h4 {
+            color: var(--primary);
+            font-size: 1rem;
         }
 
-        .form-group {
-            margin-bottom: 1.5rem;
+        .author-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
+        /* Contact Section */
+        .contact {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--coral) 100%);
+            color: white;
+            text-align: center;
         }
 
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--white);
-            font-family: inherit;
+        .contact h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
 
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: rgba(255, 255, 255, 0.7);
+        .contact p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-cta {
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .contact-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
         }
 
         /* Animations */
-        @keyframes slideInUp {
+        @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(50px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -584,10 +549,10 @@
             }
         }
 
-        @keyframes slideInRight {
+        @keyframes fadeInRight {
             from {
                 opacity: 0;
-                transform: translateX(50px);
+                transform: translateX(30px);
             }
             to {
                 opacity: 1;
@@ -595,19 +560,21 @@
             }
         }
 
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
         }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Mobile Responsiveness */
+        /* Responsive Design */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .nav-container {
+                padding: 1rem;
+            }
+
             .nav-links {
                 display: none;
             }
@@ -622,41 +589,32 @@
                 font-size: 2.5rem;
             }
 
-            .about-grid {
+            .about-content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                text-align: center;
             }
 
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .hero-buttons {
+            .values {
                 justify-content: center;
+                flex-wrap: wrap;
             }
 
-            .stats-grid {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
                 grid-template-columns: 1fr;
             }
         }
 
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 15px;
-            }
-
-            .hero-text h1 {
-                font-size: 2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .btn {
-                padding: 0.8rem 1.5rem;
-            }
+        /* Scroll behavior */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -664,12 +622,12 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">Poola Prasad</a>
+            <div class="logo">Poola Prasad</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -680,206 +638,286 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Project & Delivery Management Leader</h1>
-                    <p class="subtitle">Agile Strategist | PMP & Agile Coach</p>
-                    <p class="description">Helping individuals and teams deliver better, grow faster, and lead with confidence through strategic project management and agile methodologies.</p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">
-                            <i class="fas fa-calendar-alt"></i>
-                            Book Coaching
-                        </a>
-                        <a href="#services" class="btn btn-secondary">
-                            <i class="fas fa-eye"></i>
-                            View Services
-                        </a>
-                        <a href="https://linkedin.com/in/poolaprasad" class="btn btn-secondary" target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                            Connect on LinkedIn
-                        </a>
-                    </div>
+                    <h1>Empowering Projects, People & Possibilities.</h1>
+                    <p>Transform your team's potential with expert Agile coaching, strategic project management, and personalized career mentoring that delivers measurable results.</p>
+                    <a href="#contact" class="cta-button">
+                        Book a Free Discovery Call
+                        <span>→</span>
+                    </a>
                 </div>
                 <div class="hero-image">
-                    <div class="profile-card">
-                        <div class="profile-image">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <h3 style="color: white; margin-bottom: 0.5rem;">Poola Prasad</h3>
-                        <p style="color: rgba(255,255,255,0.8);">Certified Project Manager</p>
-                    </div>
+                    <img src="https://via.placeholder.com/400x500/667eea/ffffff?text=Poola+Prasad" alt="Poola Prasad - Agile Coach">
                 </div>
             </div>
         </div>
-        
-        <!-- Values Ticker -->
-        <div class="values-ticker">
-            <div class="ticker-content">
-                <div class="ticker-item">
-                    <i class="fas fa-bullseye"></i>
-                    Strategic
+    </section>
+
+    <!-- Service Pillars -->
+    <section class="pillars">
+        <div class="container">
+            <h2>Three Pillars of Excellence</h2>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon">🚀</div>
+                    <h3>Agile Transformation</h3>
+                    <p>Accelerate team performance with proven Agile methodologies, from Scrum mastery to enterprise-wide transformations.</p>
                 </div>
-                <div class="ticker-item">
-                    <i class="fas fa-heart"></i>
-                    Empathetic
+                <div class="pillar-card">
+                    <div class="pillar-icon">⚡</div>
+                    <h3>Project Excellence</h3>
+                    <p>Strategic project management that delivers on time, within budget, and exceeds stakeholder expectations every time.</p>
                 </div>
-                <div class="ticker-item">
-                    <i class="fas fa-search"></i>
-                    Detail-Oriented
-                </div>
-                <div class="ticker-item">
-                    <i class="fas fa-users"></i>
-                    Collaborative
-                </div>
-                <div class="ticker-item">
-                    <i class="fas fa-lightbulb"></i>
-                    Innovative
-                </div>
-                <div class="ticker-item">
-                    <i class="fas fa-trophy"></i>
-                    Results-Driven
+                <div class="pillar-card">
+                    <div class="pillar-icon">🌟</div>
+                    <h3>Career Growth</h3>
+                    <p>Personalized mentoring to unlock your leadership potential and accelerate your career in project management and Agile roles.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section">
+    <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title fade-in">About Poola</h2>
-            <div class="about-grid">
-                <div class="about-image fade-in">
-                    <div class="about-card">
-                        <div style="text-align: center; padding: 2rem;">
-                            <i class="fas fa-project-diagram" style="font-size: 4rem; color: var(--accent-teal); margin-bottom: 1rem;"></i>
-                            <h4 style="color: var(--primary-color); margin-bottom: 1rem;">11+ Years Experience</h4>
-                            <p style="color: var(--text-light);">Global Project Delivery & Team Leadership</p>
-                        </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Transforming Teams, One Project at a Time</h2>
+                    <p>With over 12 years of experience leading high-performing teams across Fortune 500 companies and innovative startups, I've discovered that the most successful projects aren't just about processes—they're about people.</p>
+                    <p>My approach combines the rigor of Agile methodologies with the warmth of human-centered leadership, creating environments where teams don't just deliver—they thrive.</p>
+                    <p>From guiding teams through complex digital transformations to mentoring emerging leaders, I'm passionate about unlocking potential and creating lasting positive change.</p>
+                    <div class="values">
+                        <span class="value-tag">Empathy</span>
+                        <span class="value-tag">Agility</span>
+                        <span class="value-tag">Clarity</span>
+                        <span class="value-tag">Growth</span>
                     </div>
                 </div>
-                <div class="about-text fade-in">
-                    <h3>Passionate About Coaching Future Project Leaders</h3>
-                    <p>With over 11 years of experience in global project delivery and team leadership, I specialize in Agile, Scrum, and Hybrid delivery models. My expertise spans across multiple industries, helping organizations transform their project management capabilities.</p>
-                    <p>I'm certified in PMI-ACP, CSM, and CSPO, with PMP certification currently in progress. My mission is to empower individuals and teams to achieve excellence through strategic project management and agile coaching.</p>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <div class="stat-number">50+</div>
-                            <div>Projects Delivered</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">200+</div>
-                            <div>Team Members Coached</div>
-                        </div>
-                    </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&h=600&fit=crop" alt="Team collaboration">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section">
+    <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title fade-in">Services & Coaching</h2>
-            <p class="section-subtitle fade-in">Empowering your journey with personalized coaching and strategic guidance</p>
+            <h2>Premium Services</h2>
             <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-user-tie"></i>
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3>Agile Coaching</h3>
+                        <p>Transform your team's velocity</p>
                     </div>
-                    <h3>1-on-1 Career Coaching</h3>
-                    <p>For aspiring project managers or mid-career transitions. Get personalized advice, resume help, and comprehensive growth planning tailored to your career goals.</p>
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-phone"></i>
-                        Book Free Discovery Call
-                    </a>
-                </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-sync-alt"></i>
+                    <div class="service-content">
+                        <ul>
+                            <li>Team workshops & retrospectives</li>
+                            <li>Scrum Master certification training</li>
+                            <li>Enterprise Agile transformation</li>
+                            <li>Custom framework development</li>
+                        </ul>
+                        <button class="service-cta">Learn More</button>
                     </div>
-                    <h3>Agile Coaching</h3>
-                    <p>Learn Scrum ceremonies, backlog grooming, estimation tools. Master JIRA, DevOps, Asana, and Planning Poker with hands-on demos and practical guidance.</p>
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-calendar"></i>
-                        Schedule Agile Session
-                    </a>
                 </div>
-                
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>PMP / CSM / CSPO Certification Coaching</h3>
-                    <p>Custom study plans, real-world mapping, and comprehensive exam prep. Get guidance through the application and audit process for guaranteed success.</p>
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-graduation-cap"></i>
-                        Start My Prep
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section skills-section">
-        <div class="container">
-            <h2 class="section-title fade-in">Skills & Tools</h2>
-            <div class="skills-grid">
-                <div class="skill-category fade-in">
-                    <h3><i class="fas fa-users"></i> Project & People</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Agile Methodologies</span>
-                        <span class="skill-tag">Scrum Master</span>
-                        <span class="skill-tag">Hybrid Delivery</span>
-                        <span class="skill-tag">Risk Management</span>
-                        <span class="skill-tag">Stakeholder Engagement</span>
-                        <span class="skill-tag">Team Leadership</span>
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3>Project Management</h3>
+                        <p>Strategic guidance for complex projects</p>
+                    </div>
+                    <div class="service-content">
+                        <ul>
+                            <li>Remote project management</li>
+                            <li>Stakeholder alignment strategies</li>
+                            <li>Risk assessment & mitigation</li>
+                            <li>PMO setup & optimization</li>
+                        </ul>
+                        <button class="service-cta">Learn More</button>
                     </div>
                 </div>
-                
-                <div class="skill-category fade-in">
-                    <h3><i class="fas fa-cogs"></i> Tech Stack</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">JIRA</span>
-                        <span class="skill-tag">ClickUp</span>
-                        <span class="skill-tag">Azure DevOps</span>
-                        <span class="skill-tag">MS Project</span>
-                        <span class="skill-tag">Zoho</span>
-                        <span class="skill-tag">Asana</span>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3>Career Coaching</h3>
+                        <p>1:1 mentoring for PM & Agile professionals</p>
+                    </div>
+                    <div class="service-content">
+                        <ul>
+                            <li>Leadership development programs</li>
+                            <li>Interview preparation & strategy</li>
+                            <li>Certification roadmap planning</li>
+                            <li>Personal brand building</li>
+                        </ul>
+                        <button class="service-cta">Book Session</button>
                     </div>
                 </div>
-                
-                <div class="skill-category fade-in">
-                    <h3><i class="fas fa-chart-line"></i> Metrics & Planning</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">RACI Matrix</span>
-                        <span class="skill-tag">Burndown Charts</span>
-                        <span class="skill-tag">Planning Poker</span>
-                        <span class="skill-tag">Sprint Planning</span>
-                        <span class="skill-tag">Backlog Grooming</span>
-                        <span class="skill-tag">Estimation</span>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3>Custom Solutions</h3>
+                        <p>Tailored programs for your organization</p>
+                    </div>
+                    <div class="service-content">
+                        <ul>
+                            <li>Organizational health assessments</li>
+                            <li>Custom training programs</li>
+                            <li>Process optimization audits</li>
+                            <li>Leadership team development</li>
+                        </ul>
+                        <button class="service-cta">Get Quote</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section class="section">
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
         <div class="container">
-            <h2 class="section-title fade-in">Certifications</h2>
-            <div class="cert-grid">
-                <div class="cert-badge completed fade-in">
-                    <div class="cert-icon">
-                        <i class="fas fa-medal"></i>
+            <h2>What Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        Sarah's coaching transformed our team's velocity by 40% in just three months. Her approach is both strategic and deeply human-centered.
                     </div>
-                    <h3>PMI-ACP</h3>
-                    <p>Agile Certified Practitioner</p>
-                    <div style="color: var(--accent-teal); font-weight: bold;">✅ Certified</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <h4>Michael Rodriguez</h4>
+                            <p>VP Engineering, TechFlow</p>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="cert-badge completed fade-in">
-                    <div class="cert-icon">
-                        <i class="fas fa-award"></i>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        The career mentoring I received was a game-changer. Sarah helped me land my dream PM role and negotiate a 35% salary increase.
                     </div>
-                    <h3>CSM</h3>
-                    <p>Certified Scrum Master</p
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JL</div>
+                        <div class="author-info">
+                            <h4>Jennifer Liu</h4>
+                            <p>Senior Project Manager, InnovateCorp</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        Our Agile transformation was seamless thanks to Sarah's expertise. She made complex concepts accessible to our entire organization.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DK</div>
+                        <div class="author-info">
+                            <h4>David Kim</h4>
+                            <p>CTO, Digital Dynamics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Ready to Transform Your Team?</h2>
+            <p>Let's connect and explore how we can unlock your team's full potential together.</p>
+            <a href="#" class="contact-cta">Schedule Your Free Discovery Call</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Poola Prasad</h3>
+                    <p>Agile Coach • Project Manager • Career Mentor</p>
+                    <p>Empowering teams worldwide to achieve extraordinary results</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p>Agile Coaching<br>Project Management<br>Career Mentoring<br>Custom Solutions</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <p>poola90s@gmail.com<br>+91 8099944569<br>Available globally via remote</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link">📧</a>
+                <a href="#" class="social-link">💼</a>
+                <a href="#" class="social-link">🐦</a>
+                <a href="#" class="social-link">📸</a>
+            </div>
+            <p style="margin-top: 2rem; opacity: 0.7;">&copy; 2025 Poola Prasad. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.pillar-card, .service-card, .testimonial-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add hover effects to CTA buttons
+        document.querySelectorAll('.cta-button, .service-cta, .contact-cta').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Add click handlers for service CTAs
+        document.querySelectorAll('.service-cta').forEach(button => {
+            button.addEventListener('click', function() {
+                // Animate button
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(
