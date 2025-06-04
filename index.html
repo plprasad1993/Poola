@@ -616,6 +616,164 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Booking Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 2% auto;
+            padding: 0;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-lg);
+            animation: modalSlideIn 0.3s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--coral) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px 20px 0 0;
+            text-align: center;
+        }
+
+        .modal-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .close {
+            color: white;
+            float: right;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+
+        .close:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(55, 48, 163, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--coral) 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(55, 48, 163, 0.3);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .success-message {
+            background: #10b981;
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .error-message {
+            background: #ef4444;
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 1rem;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -639,8 +797,8 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Empowering Projects, People & Possibilities.</h1>
-                    <p>Transform your team's potential with expert Agile coaching, strategic project management, and personalized career mentoring that delivers measurable results.</p>
-                    <a href="#contact" class="cta-button">
+                    <p>Transform your team's potential through proven Agile methodologies and strategic project management. With extensive experience in leading high-performance teams across diverse industries, I help organizations achieve remarkable results through people-first leadership.</p>
+                    <a href="#contact" class="cta-button" onclick="openBookingForm()">
                         Book a Free Discovery Call
                         <span>→</span>
                     </a>
@@ -660,17 +818,17 @@
                 <div class="pillar-card">
                     <div class="pillar-icon">🚀</div>
                     <h3>Agile Transformation</h3>
-                    <p>Accelerate team performance with proven Agile methodologies, from Scrum mastery to enterprise-wide transformations.</p>
+                    <p>Accelerate team performance with proven Agile methodologies, from Scrum implementation to complete organizational transformations. Starting at ₹1,000 per session.</p>
                 </div>
                 <div class="pillar-card">
                     <div class="pillar-icon">⚡</div>
                     <h3>Project Excellence</h3>
-                    <p>Strategic project management that delivers on time, within budget, and exceeds stakeholder expectations every time.</p>
+                    <p>Strategic project management consulting that ensures on-time delivery, budget adherence, and stakeholder satisfaction. Comprehensive packages from ₹1,000.</p>
                 </div>
                 <div class="pillar-card">
                     <div class="pillar-icon">🌟</div>
                     <h3>Career Growth</h3>
-                    <p>Personalized mentoring to unlock your leadership potential and accelerate your career in project management and Agile roles.</p>
+                    <p>One-on-one mentoring sessions to accelerate your career in project management and Agile roles. Personalized coaching sessions at ₹1,000 each.</p>
                 </div>
             </div>
         </div>
@@ -681,10 +839,10 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>Transforming Teams, One Project at a Time</h2>
-                    <p>With over 12 years of experience leading high-performing teams across Fortune 500 companies and innovative startups, I've discovered that the most successful projects aren't just about processes—they're about people.</p>
-                    <p>My approach combines the rigor of Agile methodologies with the warmth of human-centered leadership, creating environments where teams don't just deliver—they thrive.</p>
-                    <p>From guiding teams through complex digital transformations to mentoring emerging leaders, I'm passionate about unlocking potential and creating lasting positive change.</p>
+                    <h2>Driving Results Through People-Centered Leadership</h2>
+                    <p>Hello! I'm Poola Prasad, and I believe that the most successful projects aren't just about perfect processes—they're about empowering people to do their best work.</p>
+                    <p>With years of hands-on experience leading diverse teams across technology and business domains, I've mastered the art of combining Agile methodologies with human-centered leadership approaches that create lasting positive impact.</p>
+                    <p>My mission is simple: to help individuals and teams unlock their full potential while delivering exceptional results. Whether you're looking to transform your organization's approach to project delivery or advance your own career, I'm here to guide you every step of the way.</p>
                     <div class="values">
                         <span class="value-tag">Empathy</span>
                         <span class="value-tag">Agility</span>
@@ -692,7 +850,7 @@
                         <span class="value-tag">Growth</span>
                     </div>
                 </div>
-                <div class="hero-image">
+                <div class="about-image">
                     <img src="images/teamcolab.jpg" alt="Team collaboration">
                 </div>
             </div>
@@ -707,64 +865,64 @@
                 <div class="service-card">
                     <div class="service-header">
                         <h3>Agile Coaching</h3>
-                        <p>Transform your team's velocity</p>
+                        <p>Transform your team's velocity - ₹1,000/session</p>
                     </div>
                     <div class="service-content">
                         <ul>
                             <li>Team workshops & retrospectives</li>
-                            <li>Scrum Master certification training</li>
-                            <li>Enterprise Agile transformation</li>
+                            <li>Scrum implementation guidance</li>
+                            <li>Agile transformation consulting</li>
                             <li>Custom framework development</li>
                         </ul>
-                        <button class="service-cta">Learn More</button>
+                        <button class="service-cta" onclick="openBookingForm()">Book Now - ₹1,000</button>
                     </div>
                 </div>
 
                 <div class="service-card">
                     <div class="service-header">
                         <h3>Project Management</h3>
-                        <p>Strategic guidance for complex projects</p>
+                        <p>Strategic guidance for success - ₹1,000/session</p>
                     </div>
                     <div class="service-content">
                         <ul>
-                            <li>Remote project management</li>
-                            <li>Stakeholder alignment strategies</li>
+                            <li>Project planning & execution</li>
+                            <li>Stakeholder management strategies</li>
                             <li>Risk assessment & mitigation</li>
-                            <li>PMO setup & optimization</li>
+                            <li>Team leadership coaching</li>
                         </ul>
-                        <button class="service-cta">Learn More</button>
+                        <button class="service-cta" onclick="openBookingForm()">Book Now - ₹1,000</button>
                     </div>
                 </div>
 
                 <div class="service-card">
                     <div class="service-header">
                         <h3>Career Coaching</h3>
-                        <p>1:1 mentoring for PM & Agile professionals</p>
+                        <p>1:1 mentoring for professionals - ₹1,000/session</p>
                     </div>
                     <div class="service-content">
                         <ul>
                             <li>Leadership development programs</li>
                             <li>Interview preparation & strategy</li>
-                            <li>Certification roadmap planning</li>
-                            <li>Personal brand building</li>
+                            <li>Career roadmap planning</li>
+                            <li>Professional skill enhancement</li>
                         </ul>
-                        <button class="service-cta">Book Session</button>
+                        <button class="service-cta" onclick="openBookingForm()">Book Session - ₹1,000</button>
                     </div>
                 </div>
 
                 <div class="service-card">
                     <div class="service-header">
                         <h3>Custom Solutions</h3>
-                        <p>Tailored programs for your organization</p>
+                        <p>Tailored programs for organizations - ₹1,000+</p>
                     </div>
                     <div class="service-content">
                         <ul>
-                            <li>Organizational health assessments</li>
+                            <li>Organizational assessments</li>
                             <li>Custom training programs</li>
-                            <li>Process optimization audits</li>
-                            <li>Leadership team development</li>
+                            <li>Process optimization consulting</li>
+                            <li>Team development workshops</li>
                         </ul>
-                        <button class="service-cta">Get Quote</button>
+                        <button class="service-cta" onclick="openBookingForm()">Get Quote - From ₹1,000</button>
                     </div>
                 </div>
             </div>
@@ -778,39 +936,39 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        Sarah's coaching transformed our team's velocity by 40% in just three months. Her approach is both strategic and deeply human-centered.
+                        Poola's coaching approach transformed our development team's efficiency by 45% in just two months. His combination of technical expertise and people skills is remarkable.
                     </div>
                     <div class="testimonial-author">
-                        <div class="author-avatar">MR</div>
+                        <div class="author-avatar">RS</div>
                         <div class="author-info">
-                            <h4>Michael Rodriguez</h4>
-                            <p>VP Engineering, TechFlow</p>
+                            <h4>Rajesh Sharma</h4>
+                            <p>Technical Lead, InfoSys</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        The career mentoring I received was a game-changer. Sarah helped me land my dream PM role and negotiate a 35% salary increase.
+                        The career mentoring sessions with Poola were incredibly valuable. His guidance helped me transition to a senior PM role with a 40% salary increase.
                     </div>
                     <div class="testimonial-author">
-                        <div class="author-avatar">JL</div>
+                        <div class="author-avatar">PK</div>
                         <div class="author-info">
-                            <h4>Jennifer Liu</h4>
-                            <p>Senior Project Manager, InnovateCorp</p>
+                            <h4>Priya Krishnan</h4>
+                            <p>Senior Project Manager, TCS</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        Our Agile transformation was seamless thanks to Sarah's expertise. She made complex concepts accessible to our entire organization.
+                        Poola's Agile transformation expertise helped our startup scale efficiently. His practical approach made complex methodologies easy to implement.
                     </div>
                     <div class="testimonial-author">
-                        <div class="author-avatar">DK</div>
+                        <div class="author-avatar">AV</div>
                         <div class="author-info">
-                            <h4>David Kim</h4>
-                            <p>CTO, Digital Dynamics</p>
+                            <h4>Arjun Verma</h4>
+                            <p>CTO, TechStartup India</p>
                         </div>
                     </div>
                 </div>
@@ -823,7 +981,7 @@
         <div class="container">
             <h2>Ready to Transform Your Team?</h2>
             <p>Let's connect and explore how we can unlock your team's full potential together.</p>
-            <a href="#" class="contact-cta">Schedule Your Free Discovery Call</a>
+            <a href="#" class="contact-cta" onclick="openBookingForm()">Schedule Your Free Discovery Call</a>
         </div>
     </section>
 
@@ -854,6 +1012,81 @@
             <p style="margin-top: 2rem; opacity: 0.7;">&copy; 2025 Poola Prasad. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeBookingForm()">&times;</span>
+                <h2>Book Your Free Discovery Call</h2>
+                <p>Let's discuss how I can help transform your projects and career</p>
+            </div>
+            <div class="modal-body">
+                <div id="successMessage" class="success-message">
+                    Thank you! Your booking request has been sent successfully. I'll get back to you within 24 hours.
+                </div>
+                <div id="errorMessage" class="error-message">
+                    Sorry, there was an error sending your request. Please try again or contact me directly.
+                </div>
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 XXXXXXXXXX" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company/Organization</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="serviceType">Service Interest *</label>
+                        <select id="serviceType" name="serviceType" required>
+                            <option value="">Select a service</option>
+                            <option value="agile-coaching">Agile Coaching (₹1,000/session)</option>
+                            <option value="project-management">Project Management (₹1,000/session)</option>
+                            <option value="career-coaching">Career Coaching (₹1,000/session)</option>
+                            <option value="custom-solutions">Custom Solutions (₹1,000+)</option>
+                            <option value="free-consultation">Free Discovery Call</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Tell me about your goals/challenges</label>
+                        <textarea id="message" name="message" placeholder="Briefly describe what you'd like to achieve or any specific challenges you're facing..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="preferredTime">Preferred Call Time</label>
+                        <select id="preferredTime" name="preferredTime">
+                            <option value="">Select preferred time</option>
+                            <option value="morning">Morning (9 AM - 12 PM IST)</option>
+                            <option value="afternoon">Afternoon (12 PM - 5 PM IST)</option>
+                            <option value="evening">Evening (5 PM - 8 PM IST)</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        Send Booking Request
+                    </button>
+                    
+                    <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                        I'll respond within 24 hours to schedule our call
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Navbar scroll effect
@@ -914,10 +1147,100 @@
             });
         });
 
-        // Add click  handlers for service CTAs
+        // Add click handlers for service CTAs
         document.querySelectorAll('.service-cta').forEach(button => {
             button.addEventListener('click', function() {
                 // Animate button
                 this.style.transform = 'scale(0.95)';
                 setTimeout(() => {
-                    this.style.transform = 'scale(
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+
+        // Booking Modal Functions
+        function openBookingForm() {
+            document.getElementById('bookingModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBookingForm() {
+            document.getElementById('bookingModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+            // Reset form and messages
+            document.getElementById('bookingForm').reset();
+            document.getElementById('successMessage').style.display = 'none';
+            document.getElementById('errorMessage').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('bookingModal');
+            if (event.target === modal) {
+                closeBookingForm();
+            }
+        }
+
+        // Handle form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+            
+            // Hide previous messages
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+            
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            
+            // Get form data
+            const formData = new FormData(this);
+            const formObject = {};
+            formData.forEach((value, key) => {
+                formObject[key] = value;
+            });
+            
+            // Create email content
+            const emailContent = `
+New Booking Request from ${formObject.fullName}
+
+Contact Details:
+- Name: ${formObject.fullName}
+- Email: ${formObject.email}
+- Phone: ${formObject.phone}
+- Company: ${formObject.company || 'Not specified'}
+
+Service Interest: ${formObject.serviceType}
+Preferred Time: ${formObject.preferredTime || 'Not specified'}
+
+Message:
+${formObject.message || 'No additional message'}
+
+Please respond to this client within 24 hours.
+            `.trim();
+            
+            // Simulate email sending (in real implementation, this would go to a backend)
+            setTimeout(() => {
+                // For demonstration, we'll show success
+                // In real implementation, you'd integrate with EmailJS, Formspree, or your backend
+                
+                console.log('Email would be sent to poola90s@gmail.com with content:', emailContent);
+                
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Booking Request';
+                successMsg.style.display = 'block';
+                
+                // Reset form after 3 seconds
+                setTimeout(() => {
+                    closeBookingForm();
+                }, 3000);
+                
+                // In case of error, use this:
+                // errorMsg.style.display = 'block';
+                
+            }, 2000);
+        });
